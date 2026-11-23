@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurfs — Mini Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Qurfs<span>.</span></a>
+
+        <nav>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#games" class="nav-button">Play now</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-tag">
+                <span class="green-dot"></span>
+                YOUR NEW FAVORITE ARCADE
+            </div>
+
+            <h1>Small games.<br>
+                <span>Big fun.</span>
+            </h1>
+
+            <p>
+                Take a break, challenge yourself,
+                and discover your next favorite game.
+            </p>
+
+            <a href="#games" class="main-button">
+                Explore games <span>→</span>
+            </a>
+
+            <div class="hero-decoration">Q</div>
+        </section>
+
+        <section class="games-section" id="games">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE ARCADE</p>
+                    <h2>Choose your game</h2>
+                </div>
+
+                <span class="game-count">03 GAMES</span>
+            </div>
+
+            <div class="games-grid">
+
+                <article class="game-card reaction">
+                    <div class="game-art">
+                        <div class="reaction-symbol">⚡</div>
+                        <span class="game-number">01</span>
+                    </div>
+
+                    <div class="game-info">
+                        <div>
+                            <h3>Reaction Test</h3>
+                            <p>How fast are your reflexes?</p>
+                        </div>
+
+                        <button class="play-button"
+                            data-game="Reaction Test">Play ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card memory">
+                    <div class="game-art">
+                        <div class="memory-symbol">◈</div>
+                        <span class="game-number">02</span>
+                    </div>
+
+                    <div class="game-info">
+                        <div>
+                            <h3>Memory Match</h3>
+                            <p>Test your memory.</p>
+                        </div>
+
+                        <button class="play-button"
+                            data-game="Memory Match">Play ↗</button>
+                    </div>
+                </article>
+
+                <article class="game-card tile-game">
+                    <div class="game-art">
+                        <div class="number-symbol">2048</div>
+                        <span class="game-number">03</span>
+                    </div>
+
+                    <div class="game-info">
+                        <div>
+                            <h3>2048</h3>
+                            <p>Combine tiles. Reach 2048.</p>
+                        </div>
+
+                        <button class="play-button"
+                            data-game="2048">Play ↗</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">ABOUT QURFS</p>
+            <h2>A little fun goes a long way.</h2>
+            <p>Simple games. No downloads. Just play.</p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">Qurfs<span>.</span></a>
+        <p>Made for fun.</p>
+        <p>© <span id="year"></span> Qurfs</p>
+    </footer>
+
+    
+<div class="game-screen" id="reaction-screen">
+    <div class="reaction-box">
+        <button class="close-game" id="close-game">✕</button>
+
+        <p class="eyebrow">QURFS ARCADE</p>
+
+        <h2 id="reaction-title">Reaction Test</h2>
+
+
+        <p id="reaction-message">
+            Test how fast you can react.
+        </p>
+
+        <div class="reaction-area" id="reaction-area">
+            <span id="reaction-instruction">
+                Press start to begin
+            </span>
+        </div>
+
+        <button class="main-button" id="reaction-start">
+            Start game →
+        </button>
+
+        <p class="reaction-result" id="reaction-result"></p>
+
+    </div>
+
+        <div class="memory-box" id="memory-game">
+    <button class="close-game" id="close-memory">✕</button>
+
+    <p class="eyebrow">QURFS ARCADE</p>
+    <h2>Memory Match</h2>
+    <p>Find all the matching pairs.</p>
+
+    <div class="memory-stats">
+        <span>Moves: <strong id="memory-moves">0</strong></span>
+        <span>Pairs: <strong id="memory-pairs">0 / 8</strong></span>
+    </div>
+
+    <div class="memory-grid" id="memory-grid"></div>
+
+    <p class="memory-result" id="memory-result"></p>
+
+    <button class="main-button" id="memory-restart">
+        start game →
+    </button>
+</div>
+
+<div class="tile-box" id="tile-game">
+    <button class="close-game" id="close-tile">✕</button>
+
+    <p class="eyebrow">QURFS ARCADE</p>
+    <h2>2048</h2>
+    <p>Combine the tiles and reach 2048!</p>
+
+    <div class="tile-header">
+        <span>Score: <strong id="tile-score">0</strong></span>
+        <button class="main-button" id="tile-restart">
+            New game ↻
+        </button>
+    </div>
+
+    <div class="tile-grid" id="tile-grid"></div>
+
+    <p id="tile-message">Use your arrow keys to move the tiles.</p>
+</div>
+
+
+</div>
+<div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
